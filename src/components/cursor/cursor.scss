@@ -1,0 +1,11 @@
+@import "../../app.scss";
+
+.cursor {
+  border-radius: 50%;
+
+  z-index: 999;
+
+  @include mobile {
+    display: none;
+  }
+}

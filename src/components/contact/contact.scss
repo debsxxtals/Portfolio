@@ -1,0 +1,65 @@
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .textContainer {
+    @include mobile {
+      text-align: center;
+      align-items: center;
+    }
+
+    h1 {
+      @include mobile {
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    @include mobile {
+      padding: 50px;
+      width: 100%;
+    }
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+
+    form {
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 10px;
+        }
+      }
+
+      button {
+        background-color: orange;
+
+        
+      }
+    }
+  }
+  @include tablet {
+    padding: 5%;
+  }
+}

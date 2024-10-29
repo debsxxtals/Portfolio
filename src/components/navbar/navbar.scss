@@ -1,0 +1,17 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    height: 100%;
+
+    .social {
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
