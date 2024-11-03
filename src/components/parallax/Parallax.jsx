@@ -15,7 +15,7 @@ const Parallax = ({ type }) => {
 
   return (
     <div
-      className="parallax"
+      className="parallax relative flex items-center justify-center overflow-hidden	"
       ref={ref}
       style={{
         background:
@@ -24,12 +24,15 @@ const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #111132, #505064)",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
+      <motion.h1
+        style={{ y: yText }}
+        className=" text-7xl	lg:text-8xl text-center	"
+      >
         {type === "services" ? "What I Do?" : "What I Did?"}
       </motion.h1>
-      <motion.div className="mountains"></motion.div>
+      <motion.div className="mountains 	bg-bottom absolute	bg-contain lg:bg-cover bg-no-repeat	"></motion.div>
       <motion.div
-        className="planets"
+        className="planets bg-contain lg:bg-cover bg-bottom absolute bg-no-repeat"
         style={{
           y: yBg,
           backgroundImage: `url(${
@@ -37,7 +40,7 @@ const Parallax = ({ type }) => {
           })`,
         }}
       ></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      <motion.div style={{ x: yBg }} className="stars bg-cover bg-bottom absolute"></motion.div>
     </div>
   );
 };

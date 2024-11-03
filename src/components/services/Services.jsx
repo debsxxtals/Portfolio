@@ -26,7 +26,7 @@ const Services = () => {
 
   return (
     <motion.div
-      className="services"
+      className="services flex flex-col justify-between  max-h-screen"
       variants={variants}
       initial="initial"
       // animate="animate"
@@ -34,61 +34,87 @@ const Services = () => {
       ref={ref}
       animate={"animate"}
     >
-      <motion.div className="textContainer" variants={variants}>
-        <p>
+      <motion.div
+        className=" mt-5 textContainer flex items-center g-5 "
+        variants={variants}
+      >
+        <p className="font-light text-xl text-center lg:text-right p-4 lg:p-0 ">
           I focus on helping you build robust software solutions
           <br /> and make data-driven decisions
         </p>
-        <hr />
+        <hr className="border-none mb-2.5		" />
       </motion.div>
-      <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src="/people.webp" alt="" />
-          <h1>
+      <motion.div
+        className="titleContainer flex flex-col items-center"
+        variants={variants}
+      >
+        <div className="title	">
+          <img
+            src="/people.webp"
+            alt=""
+            className="object-cover	w-52 md:w-64	xl:w-80 h-14  md:h-16 xl:h-24			"
+          />
+          <h1 className="text-4xl md:text-6xl		xl:text-8xl font-thin		">
             <motion.b whileHover={{ color: "orange" }}>Developing</motion.b>{" "}
             Solutions
           </h1>
         </div>
-        <div className="title">
-          <h1>
+        <div className="title  ">
+          <h1 className="text-4xl md:text-6xl	xl:text-8xl font-thin	">
             <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
             Needs.
           </h1>
-          <button>WHAT I DO?</button>
+          <button className=" w-40 md:w-60 xl:w-80 h-14 md:h-16 xl:h-24		text-white border-none cursor-pointer		">
+            WHAT I DO?
+          </button>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+
+      <motion.div
+        className="listContainer  max-h-screen max-w-screen-xl grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-4 p-10 mx-auto"
+        variants={variants}
+      >
         <motion.div
-          className="box"
+          className="box flex flex-col justify-between  p-8 	"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Custom Develop Software</h2>
+          <h2 className="text-lg font-medium	mb-2 text-center md:text-start">
+            Custom Develop Software
+          </h2>
           <p>
             We develop custom software that aligns with your business needs and
             scales with growth, ensuring high performance. Our focus on
             intuitive user interfaces guarantees a seamless experience for your
             team and customers.
           </p>
-          <button>Go</button>
+          <button className="bg-orange-500 text-white px-4 py-2 rounded mt-1 ">
+            Go
+          </button>
         </motion.div>
         <motion.div
-          className="box"
+          className="box flex flex-col justify-between  p-8	"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Data-Driven Decision Making</h2>
+          <h2 className="text-lg font-medium	mb-2 text-center md:text-start">
+            Data-Driven Decision Making
+          </h2>
           <p>
             We leverage data analysis to provide actionable insights that inform
             strategic business decisions. By transforming raw data into
             meaningful information, we help you identify trends and
             opportunities that drive growth and efficiency.
           </p>
-          <button>Go</button>
+          <button className="bg-orange-500 text-white px-4 py-2 rounded mt-1 ">
+            Go
+          </button>
         </motion.div>
         <motion.div
-          className="box"
+          className="box flex flex-col justify-between  p-8 	"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>System Integration</h2>
+          <h2 className="text-lg font-medium	mb-2 text-center md:text-start">
+            System Integration
+          </h2>
           <p>
             We specialize in seamlessly integrating various software systems and
             applications to ensure smooth data flow and communication across
@@ -96,13 +122,17 @@ const Services = () => {
             connecting disparate tools, allowing for streamlined processes and
             improved collaboration.
           </p>
-          <button>Go</button>
+          <button className="bg-orange-500 text-white px-4 py-2 rounded mt-1">
+            Go
+          </button>
         </motion.div>
         <motion.div
-          className="box"
+          className="box flex flex-col justify-between  p-8  		"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Automation Solutions</h2>
+          <h2 className="text-lg font-medium	mb-2 text-center md:text-start">
+            Automation Solutions
+          </h2>
           <p>
             We design and implement automation solutions that streamline
             repetitive tasks and optimize workflows, freeing up valuable time
@@ -110,7 +140,9 @@ const Services = () => {
             operational efficiency and reduce the risk of human error, allowing
             your business to focus on strategic initiatives.
           </p>
-          <button>Go</button>
+          <button className="bg-orange-500 text-white px-4 py-2 rounded mt-1">
+            Go
+          </button>
         </motion.div>
       </motion.div>
     </motion.div>
